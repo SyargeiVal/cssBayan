@@ -2,27 +2,30 @@
     font-family: Ubuntu;
     src: url('./font/Ubuntu-Regular.ttf');
   }
+body {
+    background-color: rgb(204, 204, 204);}
 .wrapper {
-    max-width: 1920px;
+    max-width: 1400px;
+    padding: 0 0.6em;
     margin: 0 auto;
     font-family: Ubuntu;
-    padding: 0 15%;
-    background-color: rgb(128, 128, 128);
 }
 input {
     visibility: hidden;
 }
 .section {
     display: block;
-    border-top: #d5d5d5 solid 3px;
+    border-top: #e8e8e8 solid 3px;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: rgb(86, 86, 251);
 }
 .header span {
     font-size: 1.4em;
+    visibility: hidden;
 }
 .image {
     width: 100%;
@@ -53,15 +56,51 @@ input:checked + label .image {
 .section:hover .image {
     height: 400px;
 }
+input:checked + label .header {
+    color: black;
+}
+.wrapper:hover .header {
+    color: black;
+}
+.wrapper:hover .header span {
+    visibility: visible;
+}
 input:checked + label .header > span {
     transform: rotate(45deg);
 }
 .section:hover .header > span {
     transform: rotate(45deg);
 }
-input:checked + label{
-    color: aqua;
+@media (max-width: 800px) {
+    .image {
+        width: 80%;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    input:checked + label .image {
+        height: 300px;
+    }
+    .section:hover .image {
+        height: 300px;
+    }
 }
-input:hover + label{
-    color: aqua;
+@media (max-width: 500px) {
+    .image {
+        width: 90%;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    input:checked + label .image {
+        height: 250px;
+    }
+    .section:hover .image {
+        height: 250px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
 }
+  
