@@ -26,6 +26,7 @@ input {
 .header span {
     font-size: 1.4em;
     visibility: hidden;
+    transition: 0.3s;
 }
 .image {
     width: 100%;
@@ -58,6 +59,9 @@ input:checked + label .image {
 }
 input:checked + label .header {
     color: black;
+}
+.section:hover {
+    cursor: pointer;
 }
 .wrapper:hover .header {
     color: black;
