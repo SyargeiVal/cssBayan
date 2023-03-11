@@ -5,7 +5,7 @@
 body {
     background-color: rgb(204, 204, 204);}
 .wrapper {
-    max-width: 1400px;
+    max-width: 87em;
     padding: 0 0.6em;
     margin: 0 auto;
     font-family: Ubuntu;
@@ -15,7 +15,7 @@ input {
 }
 .section {
     display: block;
-    border-top: #e8e8e8 solid 3px;
+    border-top: #e8e8e8 solid 0.3em;
 }
 .header {
     display: flex;
@@ -52,10 +52,10 @@ input {
     background-image: url('./images/medawuha-svyatochnaya.jpg');
 }
 input:checked + label .image {
-    height: 400px;
+    height: 25em;
 }
 .section:hover .image {
-    height: 400px;
+    height: 25em;
 }
 input:checked + label .header {
     color: black;
@@ -82,10 +82,13 @@ input:checked + label .header > span {
         background-size: cover;
     }
     input:checked + label .image {
-        height: 300px;
+        height: 19em;
     }
     .section:hover .image {
-        height: 300px;
+        height: 19em;
+    }
+    .section {
+        border-top: #e8e8e8 solid 0.2em;
     }
 }
 @media (max-width: 500px) {
@@ -95,10 +98,10 @@ input:checked + label .header > span {
         background-size: cover;
     }
     input:checked + label .image {
-        height: 250px;
+        height: 16em;
     }
     .section:hover .image {
-        height: 250px;
+        height: 16em;
     }
     h1 {
         font-size: 1.5em;
