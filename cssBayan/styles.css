@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url('./font/Ubuntu-Regular.ttf');
+  }
+body {
+    background-color: rgb(204, 204, 204);}
+.wrapper {
+    max-width: 87em;
+    padding: 0 0.6em;
+    margin: 0 auto;
+    font-family: Ubuntu;
+}
+input {
+    visibility: hidden;
+}
+.section {
+    display: block;
+    border-top: #e8e8e8 solid 0.3em;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(86, 86, 251);
+}
+.header span {
+    font-size: 1.4em;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.image {
+    width: 100%;
+    height: 0;
+    margin-bottom: 1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.5s;
+}
+.img1 {
+    background-image: url('./images/haladnik.jpg');
+}
+.img2 {
+    background-image: url('./images/draniki.jpg');
+}
+.img3 {
+    background-image: url('./images/machanka.jpg');
+}
+.img4 {
+    background-image: url('./images/zrazy-z-bulby.jpg');
+}
+.img5 {
+    background-image: url('./images/medawuha-svyatochnaya.jpg');
+}
+input:checked + label .image {
+    height: 25em;
+}
+.section:hover .image {
+    height: 25em;
+}
+input:checked + label .header {
+    color: black;
+}
+.section:hover {
+    cursor: pointer;
+}
+.wrapper:hover .header {
+    color: black;
+}
+.wrapper:hover .header span {
+    visibility: visible;
+}
+input:checked + label .header > span {
+    transform: rotate(45deg);
+}
+.section:hover .header > span {
+    transform: rotate(45deg);
+}
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+}
+@media (max-width: 800px) {
+    .image {
+        width: 80%;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    input:checked + label .image {
+        height: 19em;
+    }
+    .section:hover .image {
+        height: 19em;
+    }
+    .section {
+        border-top: #e8e8e8 solid 0.2em;
+    }
+}
+@media (max-width: 500px) {
+    .image {
+        width: 90%;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    input:checked + label .image {
+        height: 16em;
+    }
+    .section:hover .image {
+        height: 16em;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+}
+  
