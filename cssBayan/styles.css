@@ -3,7 +3,46 @@
     src: url('./font/Ubuntu-Regular.ttf');
   }
 body {
-    background-color: rgb(204, 204, 204);}
+    background-color: rgb(204, 204, 204);
+}
+@media (min-width: 0px) {
+    .image {
+        width: 90%;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    input:checked + label .image {
+        height: 16em;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.2em;
+    } 
+    .section {
+        border-top: #e8e8e8 solid 0.2em;
+    }
+}
+@media (min-width: 821px) {
+    .image {
+        width: 80%;
+        margin: 0 auto;
+        background-size: cover;
+    }
+    input:checked + label .image {
+        height: 19em;
+    }
+    h1 {
+        font-size: 2.1em;
+    }
+    h2 {
+        font-size: 1.9em;
+    }
+    .section {
+        border-top: #e8e8e8 solid 0.3em;
+    }
+}
 .wrapper {
     max-width: 87em;
     padding: 0 0.6em;
@@ -15,7 +54,6 @@ input {
 }
 .section {
     display: block;
-    border-top: #e8e8e8 solid 0.3em;
 }
 .header {
     display: flex;
@@ -51,71 +89,53 @@ input {
 .img5 {
     background-image: url('./images/medawuha-svyatochnaya.jpg');
 }
-input:checked + label .image {
-    height: 25em;
-}
-.section:hover .image {
-    height: 25em;
-}
 input:checked + label .header {
     color: black;
-}
-.section:hover {
-    cursor: pointer;
-}
-.wrapper:hover .header {
-    color: black;
-}
-.wrapper:hover .header span {
-    visibility: visible;
 }
 input:checked + label .header > span {
     transform: rotate(45deg);
 }
-.section:hover .header > span {
-    transform: rotate(45deg);
-}
-@media (max-width: 800px) {
-    h1 {
-        font-size: 1.5em;
+@media (min-width: 821px) {
+    .wrapper:hover .header {
+        color: black;
     }
-    h2 {
-        font-size: 1.3em;
+    .wrapper:hover .header span {
+        visibility: visible;
     }
-}
-@media (max-width: 800px) {
-    .image {
-        width: 80%;
-        margin: 0 auto;
-        background-size: cover;
+    .section:hover {
+        cursor: pointer;
     }
-    input:checked + label .image {
-        height: 19em;
+    .section:active .header {
+        color: rgb(86, 86, 251);
     }
     .section:hover .image {
-        height: 19em;
+        height: 25em;
     }
-    .section {
-        border-top: #e8e8e8 solid 0.2em;
-    }
-}
-@media (max-width: 500px) {
-    .image {
-        width: 90%;
-        margin: 0 auto;
-        background-size: cover;
+    .section:hover .header > span {
+        transform: rotate(45deg);
     }
     input:checked + label .image {
-        height: 16em;
+        height: 25em;
+    }
+    .image {
+        width: 70%;
+    }
+}
+@media (min-width: 1200px) {
+    .image {
+        width: 60%;
     }
     .section:hover .image {
-        height: 16em;
+        height: 30em;
+    }
+    input:checked + label .image {
+        height: 30em;
     }
     h1 {
-        font-size: 1.4em;
+        font-size: 2.5em;
     }
     h2 {
-        font-size: 1.2em;
+        font-size: 2.3em;
     }
 }
   
